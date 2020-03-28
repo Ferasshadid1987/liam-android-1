@@ -2,6 +2,7 @@ package com.ahmedtikiwa
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
@@ -15,16 +16,20 @@ class MainActivity : AppCompatActivity() {
     private val navController: NavController
         get() = findNavController(R.id.nav_host_fragment)
 
+    private lateinit var bottomNavigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
         setSupportActionBar(toolbar)
 
         val appBarConfiguration = AppBarConfiguration.Builder(
+            R.id.signUpFragment,
+            R.id.loginFragment,
             R.id.dashboardFragment,
             R.id.videoListFragment,
             R.id.storeFragment
@@ -40,5 +45,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
+
+    fun hideBottomNavigation() {
+        bottomNavigationView.visibility = View.GONE
+    }
+
+    fun showBottomNavigation() {
+        bottomNavigationView.visibility = View.VISIBLE
     }
 }
