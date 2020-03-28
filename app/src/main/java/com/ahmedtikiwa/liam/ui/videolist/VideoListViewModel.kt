@@ -2,8 +2,10 @@ package com.ahmedtikiwa.liam.ui.videolist
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.ahmedtikiwa.liam.repository.LiamRepository
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 class VideoListViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -12,7 +14,9 @@ class VideoListViewModel(application: Application) : AndroidViewModel(applicatio
     private val liamRepository = LiamRepository()
 
     init {
-        liamRepository.getMockVideoList()
+        viewModelScope.launch {
+            liamRepository.getMockVideoList()
+        }
     }
 
     val videoList = liamRepository.videoList

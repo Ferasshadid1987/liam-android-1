@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">Liam</string>
 
+    <!-- Screen Titles -->
+    <string name="title_dashboard">Profile</string>
+    <string name="title_videos">Courses Available</string>
+    <string name="title_shop">Marketplace</string>
+
     <!-- Bottom navigation -->
     <string name="bottom_nav_title_dashboard">Dashboard</string>
     <string name="bottom_nav_title_store">Marketplace</string>
     <string name="bottom_nav_title_videos">Courses</string>
+    <string name="video_list_button_title">Course Details</string>
 </resources>

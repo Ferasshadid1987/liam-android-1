@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/videoListFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -36,8 +36,7 @@
 
     <fragment
         android:id="@+id/videoListFragment"
-        android:name="com.ahmedtikiwa.liam.ui.videolist.VideoListFragment"
-        android:label="VideoListFragment">
+        android:name="com.ahmedtikiwa.liam.ui.videolist.VideoListFragment">
         <action
             android:id="@+id/action_videoListFragment_to_videoDetailFragment"
             app:destination="@id/videoDetailFragment" />
