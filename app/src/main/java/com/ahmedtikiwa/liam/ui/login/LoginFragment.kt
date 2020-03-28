@@ -1,4 +1,4 @@
-package com.ahmedtikiwa.ui.dashboard
+package com.ahmedtikiwa.liam.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.ahmedtikiwa.liam.databinding.FragmentDashboardBinding
+import com.ahmedtikiwa.liam.databinding.FragmentLoginBinding
 
-class DashboardFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-    private lateinit var binding : FragmentDashboardBinding
+    private lateinit var binding: FragmentLoginBinding
 
-    private val viewModel : DashboardViewModel by activityViewModels()
+    private val viewModel: LoginViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,7 +20,7 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentDashboardBinding.inflate(inflater)
+        binding = FragmentLoginBinding.inflate(inflater)
 
         binding.lifecycleOwner = viewLifecycleOwner
 

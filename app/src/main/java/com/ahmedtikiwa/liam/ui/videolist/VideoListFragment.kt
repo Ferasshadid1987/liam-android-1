@@ -1,4 +1,4 @@
-package com.ahmedtikiwa.ui.store
+package com.ahmedtikiwa.liam.ui.videolist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.ahmedtikiwa.liam.databinding.FragmentStoreBinding
+import com.ahmedtikiwa.liam.databinding.FragmentVideoListBinding
 
-class StoreFragment : Fragment() {
+class VideoListFragment : Fragment() {
 
-    private lateinit var binding : FragmentStoreBinding
+    private lateinit var binding: FragmentVideoListBinding
 
-    private val viewModel : StoreViewModel by activityViewModels()
+    private val viewModel: VideoListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,7 +20,7 @@ class StoreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentStoreBinding.inflate(inflater)
+        binding = FragmentVideoListBinding.inflate(inflater)
 
         binding.lifecycleOwner = viewLifecycleOwner
 

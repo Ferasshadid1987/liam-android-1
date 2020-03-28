@@ -1,4 +1,4 @@
-package com.ahmedtikiwa.ui.login
+package com.ahmedtikiwa.liam.ui.login
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.ahmedtikiwa.ui.login.LoginFragment"
+        android:name="com.ahmedtikiwa.liam.ui.login.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
@@ -17,10 +17,10 @@
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.ahmedtikiwa.ui.dashboard.DashboardFragment"
+        android:name="com.ahmedtikiwa.liam.ui.dashboard.DashboardFragment"
         android:label="DashboardFragment" />
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.ahmedtikiwa.ui.signup.SignUpFragment"
+        android:name="com.ahmedtikiwa.liam.ui.signup.SignUpFragment"
         android:label="SignUpFragment" />
 </navigation>

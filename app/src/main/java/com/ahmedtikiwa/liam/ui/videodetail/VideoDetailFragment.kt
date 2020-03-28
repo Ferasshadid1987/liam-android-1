@@ -1,4 +1,4 @@
-package com.ahmedtikiwa.ui.videodetail
+package com.ahmedtikiwa.liam.ui.videodetail
 
 import android.os.Bundle
 import android.view.LayoutInflater

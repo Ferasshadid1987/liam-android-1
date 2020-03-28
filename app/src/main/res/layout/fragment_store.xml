@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.ahmedtikiwa.ui.store.StoreViewModel" />
+            type="com.ahmedtikiwa.liam.ui.store.StoreViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

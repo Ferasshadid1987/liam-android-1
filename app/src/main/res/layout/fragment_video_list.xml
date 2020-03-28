@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.ahmedtikiwa.ui.videolist.VideoListViewModel" />
+            type="com.ahmedtikiwa.liam.ui.videolist.VideoListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
