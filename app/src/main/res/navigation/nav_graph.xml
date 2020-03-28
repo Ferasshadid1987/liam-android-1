@@ -2,25 +2,50 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/dashboardFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.ahmedtikiwa.liam.ui.login.LoginFragment"
-        android:label="LoginFragment" >
-        <action
-            android:id="@+id/action_loginFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+        android:label="LoginFragment">
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.ahmedtikiwa.liam.ui.dashboard.DashboardFragment"
-        android:label="DashboardFragment" />
+        android:label="DashboardFragment">
+        <action
+            android:id="@+id/action_dashboardFragment_to_videoListFragment"
+            app:destination="@id/videoListFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.ahmedtikiwa.liam.ui.signup.SignUpFragment"
         android:label="SignUpFragment" />
+
+    <fragment
+        android:id="@+id/videoListFragment"
+        android:name="com.ahmedtikiwa.liam.ui.videolist.VideoListFragment"
+        android:label="VideoListFragment">
+        <action
+            android:id="@+id/action_videoListFragment_to_videoDetailFragment"
+            app:destination="@id/videoDetailFragment" />
+        <action
+            android:id="@+id/action_videoListFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/videoDetailFragment"
+        android:name="com.ahmedtikiwa.liam.ui.videodetail.VideoDetailFragment"
+        android:label="VideoDetailFragment" />
+
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.ahmedtikiwa.liam.ui.store.StoreFragment"
+        android:label="StoreFragment" />
 </navigation>

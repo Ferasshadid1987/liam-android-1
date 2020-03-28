@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Liam</string>
+
+    <!-- Bottom navigation -->
+    <string name="bottom_nav_title_dashboard">Dashboard</string>
+    <string name="bottom_nav_title_store">Marketplace</string>
+    <string name="bottom_nav_title_videos">Courses</string>
 </resources>
