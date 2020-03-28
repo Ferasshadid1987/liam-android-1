@@ -114,6 +114,7 @@
                 android:focusable="true"
                 android:text="@string/login_button_text"
                 android:textAllCaps="true"
+                android:onClick="@{() -> viewModel.onLoginClick()}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
             <TextView

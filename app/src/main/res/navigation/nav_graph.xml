@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.ahmedtikiwa.liam.ui.login.LoginFragment"
-        android:label="LoginFragment">
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            app:destination="@id/dashboardFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.ahmedtikiwa.liam.ui.dashboard.DashboardFragment"
-        android:label="DashboardFragment">
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_dashboardFragment_to_videoListFragment"
             app:destination="@id/videoListFragment" />
@@ -28,7 +34,8 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.ahmedtikiwa.liam.ui.signup.SignUpFragment"
-        android:label="SignUpFragment">
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
@@ -36,7 +43,8 @@
 
     <fragment
         android:id="@+id/videoListFragment"
-        android:name="com.ahmedtikiwa.liam.ui.videolist.VideoListFragment">
+        android:name="com.ahmedtikiwa.liam.ui.videolist.VideoListFragment"
+        tools:layout="@layout/fragment_video_list">
         <action
             android:id="@+id/action_videoListFragment_to_videoDetailFragment"
             app:destination="@id/videoDetailFragment" />
@@ -48,7 +56,8 @@
     <fragment
         android:id="@+id/videoDetailFragment"
         android:name="com.ahmedtikiwa.liam.ui.videodetail.VideoDetailFragment"
-        android:label="VideoDetailFragment">
+        android:label="VideoDetailFragment"
+        tools:layout="@layout/fragment_video_detail">
         <argument
             android:name="videoItem"
             app:argType="com.ahmedtikiwa.liam.domain.VideoItem" />
@@ -57,5 +66,6 @@
     <fragment
         android:id="@+id/storeFragment"
         android:name="com.ahmedtikiwa.liam.ui.store.StoreFragment"
-        android:label="StoreFragment" />
+        android:label="StoreFragment"
+        tools:layout="@layout/fragment_store" />
 </navigation>

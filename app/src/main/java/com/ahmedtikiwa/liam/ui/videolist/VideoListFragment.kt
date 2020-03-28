@@ -55,7 +55,7 @@ class VideoListFragment : Fragment() {
             videoListAdapter?.videos = it
         })
 
-        viewModel.navigateToSelectedShow.observe(viewLifecycleOwner, Observer {
+        viewModel.navigateToSelectedVideo.observe(viewLifecycleOwner, Observer {
             if (null != it) {
                 this.findNavController().navigate(
                     VideoListFragmentDirections.actionVideoListFragmentToVideoDetailFragment(it)

@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.ahmedtikiwa.MainActivity
 import com.ahmedtikiwa.liam.databinding.FragmentLoginBinding
 
@@ -31,14 +33,27 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        viewModel.navigateToDashboard.observe(viewLifecycleOwner, Observer {
+                if (it) {
+                    this.findNavController().navigate(
+                        LoginFragmentDirections.actionLoginFragmentToDashboardFragment()
+                    )
+                    viewModel.navigateToDashboardComplete()
+                }
+        })
+    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         (activity as MainActivity).hideBottomNavigation()
     }
 
     override fun onDetach() {
-        (activity as MainActivity).showBottomNavigation()
         super.onDetach()
+        (activity as MainActivity).showBottomNavigation()
     }
 
     override fun onStart() {

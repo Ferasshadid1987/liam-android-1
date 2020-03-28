@@ -18,7 +18,7 @@ class VideoListViewModel(application: Application) : AndroidViewModel(applicatio
 
     private val _navigateToSelectedVideo = MutableLiveData<VideoItem>()
 
-    val navigateToSelectedShow: LiveData<VideoItem>
+    val navigateToSelectedVideo: LiveData<VideoItem>
         get() = _navigateToSelectedVideo
 
     init {
