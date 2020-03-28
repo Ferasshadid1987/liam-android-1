@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ahmedtikiwa.liam.R
@@ -35,7 +36,7 @@ class VideoListFragment : Fragment() {
         binding.viewModel = viewModel
 
         videoListAdapter = VideoListAdapter(VideoListAdapter.VideoListItemAdapterListener {
-
+            viewModel.displayVideoDetail(it)
         })
 
         binding.root.findViewById<RecyclerView>(R.id.recyclerview_video_list).apply {
@@ -52,6 +53,15 @@ class VideoListFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel.videoList.observe(viewLifecycleOwner, Observer<List<VideoItem>> {
             videoListAdapter?.videos = it
+        })
+
+        viewModel.navigateToSelectedShow.observe(viewLifecycleOwner, Observer {
+            if (null != it) {
+                this.findNavController().navigate(
+                    VideoListFragmentDirections.actionVideoListFragmentToVideoDetailFragment(it)
+                )
+                viewModel.displayVideoDetailComplete()
+            }
         })
     }
 

@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.ahmedtikiwa.liam.ui.signup.SignUpFragment"
-        android:label="SignUpFragment" >
+        android:label="SignUpFragment">
         <action
             android:id="@+id/action_signUpFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
@@ -48,7 +48,11 @@
     <fragment
         android:id="@+id/videoDetailFragment"
         android:name="com.ahmedtikiwa.liam.ui.videodetail.VideoDetailFragment"
-        android:label="VideoDetailFragment" />
+        android:label="VideoDetailFragment">
+        <argument
+            android:name="videoItem"
+            app:argType="com.ahmedtikiwa.liam.domain.VideoItem" />
+    </fragment>
 
     <fragment
         android:id="@+id/storeFragment"
