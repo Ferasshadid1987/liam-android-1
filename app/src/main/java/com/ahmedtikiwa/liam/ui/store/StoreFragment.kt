@@ -4,15 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.ahmedtikiwa.liam.R
 import com.ahmedtikiwa.liam.databinding.FragmentStoreBinding
+import com.ahmedtikiwa.liam.domain.StoreItem
 
 class StoreFragment : Fragment() {
 
-    private lateinit var binding : FragmentStoreBinding
+    private lateinit var binding: FragmentStoreBinding
 
-    private val viewModel : StoreViewModel by activityViewModels()
+    private var storeListAdapter: StoreListAdapter? = null
+
+    private val viewModel: StoreViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,6 +34,27 @@ class StoreFragment : Fragment() {
 
         binding.viewModel = viewModel
 
+        storeListAdapter = StoreListAdapter(StoreListAdapter.StoreListItemAdapterListener {
+            viewModel.displayStoreItemDetail(it)
+        })
+
+        binding.root.findViewById<RecyclerView>(R.id.recyclerview_store_list).apply {
+            layoutManager = GridLayoutManager(context, 2)
+            adapter = storeListAdapter
+        }
+
         return binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel.storeList.observe(viewLifecycleOwner, Observer<List<StoreItem>> {
+            storeListAdapter?.storeItems = it
+        })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_shop)
     }
 }

@@ -15,13 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/margin_vertical"
-        android:background="@color/videoListBackgroundColor">
+        android:background="@color/listBackgroundColor">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_video_list"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_horizontal_half"
+            android:layout_marginTop="@dimen/margin_vertical_half"
             android:layout_marginEnd="@dimen/margin_horizontal_half"
             android:layout_marginBottom="@dimen/margin_vertical"
             android:clipToPadding="false"

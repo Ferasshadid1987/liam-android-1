@@ -5,6 +5,14 @@
     <string name="title_dashboard">Profile</string>
     <string name="title_videos">Courses Available</string>
     <string name="title_shop">Marketplace</string>
+    <string name="title_login">Liam</string>
+    <string name="subtitle_login">Login into your account</string>
+
+    <!-- Login -->
+    <string name="email_field_hint">Email</string>
+    <string name="password_field_hint">Password</string>
+    <string name="login_signup_hint">Don\'t have an account? Signup</string>
+    <string name="login_button_text">Login</string>
 
     <!-- Bottom navigation -->
     <string name="bottom_nav_title_dashboard">Dashboard</string>

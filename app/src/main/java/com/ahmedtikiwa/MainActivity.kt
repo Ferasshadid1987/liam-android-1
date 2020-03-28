@@ -17,12 +17,13 @@ class MainActivity : AppCompatActivity() {
         get() = findNavController(R.id.nav_host_fragment)
 
     private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        toolbar = findViewById<Toolbar>(R.id.toolbar)
         bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
         setSupportActionBar(toolbar)
@@ -53,5 +54,13 @@ class MainActivity : AppCompatActivity() {
 
     fun showBottomNavigation() {
         bottomNavigationView.visibility = View.VISIBLE
+    }
+
+    fun hideToolbar() {
+        toolbar.visibility = View.GONE
+    }
+
+    fun showToolbar() {
+        toolbar.visibility = View.VISIBLE
     }
 }

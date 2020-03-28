@@ -4,5 +4,5 @@
     <color name="colorPrimaryDark">#00363a</color>
     <color name="colorAccent">#428e92</color>
 
-    <color name="videoListBackgroundColor">#eceff1</color>
+    <color name="listBackgroundColor">#eceff1</color>
 </resources>

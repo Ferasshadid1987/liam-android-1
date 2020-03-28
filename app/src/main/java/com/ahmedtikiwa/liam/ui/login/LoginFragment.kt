@@ -40,4 +40,14 @@ class LoginFragment : Fragment() {
         (activity as MainActivity).showBottomNavigation()
         super.onDetach()
     }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).hideToolbar()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as MainActivity).showToolbar()
+    }
 }

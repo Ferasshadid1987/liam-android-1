@@ -95,64 +95,70 @@ class LiamRepository {
         }
     }
 
-    fun getMockStoreList() {
-        val list = mutableListOf<StoreItem>()
-        list.add(
-            StoreItem(
-                id = 1,
-                name = "XBox One X",
-                price = "L100",
-                type = "Gaming",
-                imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
-            )
-        )
-        list.add(
-            StoreItem(
-                id = 2,
-                name = "XBox One X",
-                price = "L100",
-                type = "Gaming",
-                imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
-            )
-        )
-        list.add(
-            StoreItem(
-                id = 2,
-                name = "XBox One X",
-                price = "L100",
-                type = "Gaming",
-                imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
-            )
-        )
-        list.add(
-            StoreItem(
-                id = 3,
-                name = "XBox One X",
-                price = "L100",
-                type = "Gaming",
-                imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
-            )
-        )
-        list.add(
-            StoreItem(
-                id = 4,
-                name = "XBox One X",
-                price = "L100",
-                type = "Gaming",
-                imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
-            )
-        )
-        list.add(
-            StoreItem(
-                id = 5,
-                name = "XBox One X",
-                price = "L100",
-                type = "Gaming",
-                imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
-            )
-        )
+    suspend fun getMockStoreList() {
+        withContext(Dispatchers.IO) {
+            try {
+                val list = mutableListOf<StoreItem>()
+                list.add(
+                    StoreItem(
+                        id = 1,
+                        name = "XBox One X",
+                        price = "L100",
+                        type = "Gaming",
+                        imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
+                    )
+                )
+                list.add(
+                    StoreItem(
+                        id = 2,
+                        name = "XBox One X",
+                        price = "L100",
+                        type = "Gaming",
+                        imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
+                    )
+                )
+                list.add(
+                    StoreItem(
+                        id = 2,
+                        name = "XBox One X",
+                        price = "L100",
+                        type = "Gaming",
+                        imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
+                    )
+                )
+                list.add(
+                    StoreItem(
+                        id = 3,
+                        name = "XBox One X",
+                        price = "L100",
+                        type = "Gaming",
+                        imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
+                    )
+                )
+                list.add(
+                    StoreItem(
+                        id = 4,
+                        name = "XBox One X",
+                        price = "L100",
+                        type = "Gaming",
+                        imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
+                    )
+                )
+                list.add(
+                    StoreItem(
+                        id = 5,
+                        name = "XBox One X",
+                        price = "L100",
+                        type = "Gaming",
+                        imageUrl = "https://game4u.co.za/wp-content/uploads/2020/02/standalone2.png"
+                    )
+                )
 
-        _storeList.postValue(list)
+                _storeList.postValue(list)
+            } catch (e: Exception) {
+                Timber.e(e)
+            }
+        }
 
     }
 }
