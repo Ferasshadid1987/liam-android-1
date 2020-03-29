@@ -124,7 +124,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_vertical"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_horizontal"
+                android:onClick="@{() -> viewModel.onSignUpClick()}"
                 android:text="@string/login_signup_hint"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 

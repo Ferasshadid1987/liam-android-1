@@ -7,6 +7,7 @@
     <string name="title_shop">Marketplace</string>
     <string name="title_login">Liam</string>
     <string name="subtitle_login">Login into your account</string>
+    <string name="title_sign_up">Sign up for an account</string>
 
     <!-- Login -->
     <string name="email_field_hint">Email</string>
@@ -25,4 +26,7 @@
     <string name="dashboard_downloads_title">Downloads</string>
     <string name="store_item_download_notification_text">Your download will begin shortly</string>
     <string name="store_item_favorite_notification_text">You have liked this item</string>
+    <string name="username_field_hint">Username</string>
+    <string name="signup_have_an_account_hint">Already have an account? Sign in</string>
+    <string name="signup_button_text">Create Account</string>
 </resources>

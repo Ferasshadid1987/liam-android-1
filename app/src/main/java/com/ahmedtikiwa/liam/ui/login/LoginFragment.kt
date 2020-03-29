@@ -37,12 +37,21 @@ class LoginFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         viewModel.navigateToDashboard.observe(viewLifecycleOwner, Observer {
-                if (it) {
-                    this.findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToDashboardFragment()
-                    )
-                    viewModel.navigateToDashboardComplete()
-                }
+            if (it) {
+                this.findNavController().navigate(
+                    LoginFragmentDirections.actionLoginFragmentToDashboardFragment()
+                )
+                viewModel.navigateToDashboardComplete()
+            }
+        })
+
+        viewModel.navigateToSignUp.observe(viewLifecycleOwner, Observer {
+            if (it) {
+                this.findNavController().navigate(
+                    LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
+                )
+                viewModel.navigateToSignUpComplete()
+            }
         })
     }
 

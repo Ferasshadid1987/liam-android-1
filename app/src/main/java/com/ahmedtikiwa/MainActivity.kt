@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.signUpFragment,
             R.id.loginFragment,
             R.id.dashboardFragment,
             R.id.videoListFragment,
