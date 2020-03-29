@@ -78,15 +78,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/store_list_item_price"
-                app:srcCompat="@drawable/ic_arrow_upward_black_24dp" />
-
-            <ImageButton
-                android:id="@+id/store_list_item_bid_down"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/store_list_item_bid_up"
-                app:layout_constraintTop_toBottomOf="@id/store_list_item_price"
-                app:srcCompat="@drawable/ic_arrow_downward_black_24dp" />
+                app:srcCompat="@drawable/ic_file_download_black_24dp" />
 
             <ImageButton
                 android:layout_width="0dp"
