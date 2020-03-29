@@ -11,12 +11,12 @@
 
     <!-- Login screen -->
     <dimen name="login_button_height">75dp</dimen>
-    <dimen name="login_hero_height">250dp</dimen>
+    <dimen name="login_hero_height">200dp</dimen>
 
     <!-- Dashboard screen -->
     <dimen name="dashboard_profile_image_border_width">4dp</dimen>
-    <dimen name="dashboard_profile_image_width">200dp</dimen>
-    <dimen name="dashboard_profile_image_height">200dp</dimen>
+    <dimen name="dashboard_profile_image_width">180dp</dimen>
+    <dimen name="dashboard_profile_image_height">180dp</dimen>
     <dimen name="dashboard_profile_image_frame_padding">30dp</dimen>
 
 </resources>

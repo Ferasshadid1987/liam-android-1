@@ -53,7 +53,8 @@ class LiamRepository {
                         name = "Drawing for Kids: How to Draw Step-by-Step Interactive Art",
                         description = "Hey Friends! Let's Build This Course Together. Send Me Your Artsy Ideas: What Would You Like to Learn to Draw? Ages 5+.",
                         price = "L200",
-                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+                        videoUrl = "S0Q4gqBUs7c"
                     )
                 )
                 list.add(
@@ -62,7 +63,8 @@ class LiamRepository {
                         name = "Drawing for Kids: How to Draw Step-by-Step Interactive Art",
                         description = "Hey Friends! Let's Build This Course Together. Send Me Your Artsy Ideas: What Would You Like to Learn to Draw? Ages 5+.",
                         price = "L200",
-                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+                        videoUrl = "S0Q4gqBUs7c"
                     )
                 )
                 list.add(
@@ -71,7 +73,8 @@ class LiamRepository {
                         name = "Drawing for Kids: How to Draw Step-by-Step Interactive Art",
                         description = "Hey Friends! Let's Build This Course Together. Send Me Your Artsy Ideas: What Would You Like to Learn to Draw? Ages 5+.",
                         price = "L200",
-                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+                        videoUrl = "S0Q4gqBUs7c"
                     )
                 )
                 list.add(
@@ -80,7 +83,8 @@ class LiamRepository {
                         name = "Drawing for Kids: How to Draw Step-by-Step Interactive Art",
                         description = "Hey Friends! Let's Build This Course Together. Send Me Your Artsy Ideas: What Would You Like to Learn to Draw? Ages 5+.",
                         price = "L200",
-                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+                        videoUrl = "S0Q4gqBUs7c"
                     )
                 )
                 list.add(
@@ -89,7 +93,8 @@ class LiamRepository {
                         name = "Drawing for Kids: How to Draw Step-by-Step Interactive Art",
                         description = "Hey Friends! Let's Build This Course Together. Send Me Your Artsy Ideas: What Would You Like to Learn to Draw? Ages 5+.",
                         price = "L200",
-                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+                        videoUrl = "S0Q4gqBUs7c"
                     )
                 )
                 list.add(
@@ -98,7 +103,8 @@ class LiamRepository {
                         name = "Drawing for Kids: How to Draw Step-by-Step Interactive Art",
                         description = "Hey Friends! Let's Build This Course Together. Send Me Your Artsy Ideas: What Would You Like to Learn to Draw? Ages 5+.",
                         price = "L200",
-                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+                        videoUrl = "S0Q4gqBUs7c"
                     )
                 )
                 list.add(
@@ -107,7 +113,8 @@ class LiamRepository {
                         name = "Drawing for Kids: How to Draw Step-by-Step Interactive Art",
                         description = "Hey Friends! Let's Build This Course Together. Send Me Your Artsy Ideas: What Would You Like to Learn to Draw? Ages 5+.",
                         price = "L200",
-                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                        imageUrl = "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+                        videoUrl = "S0Q4gqBUs7c"
                     )
                 )
 

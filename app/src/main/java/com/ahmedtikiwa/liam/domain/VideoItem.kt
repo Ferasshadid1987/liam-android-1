@@ -8,15 +8,16 @@ data class VideoItem(
     var name: String?,
     var description: String?,
     var price: String?,
-    var imageUrl: String?
+    var imageUrl: String?,
+    var videoUrl: String
 ) : Parcelable {
-
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readString()
+        parcel.readString(),
+        parcel.readString().toString()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -25,6 +26,7 @@ data class VideoItem(
         parcel.writeString(description)
         parcel.writeString(price)
         parcel.writeString(imageUrl)
+        parcel.writeString(videoUrl)
     }
 
     override fun describeContents(): Int {
@@ -40,4 +42,5 @@ data class VideoItem(
             return arrayOfNulls(size)
         }
     }
+
 }

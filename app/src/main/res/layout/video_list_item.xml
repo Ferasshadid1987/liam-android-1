@@ -82,11 +82,11 @@
                     android:layout_marginStart="@dimen/margin_horizontal"
                     android:layout_marginTop="@dimen/margin_vertical_half"
                     android:layout_marginEnd="@dimen/margin_horizontal"
-                    android:text="@string/video_list_button_title"
                     android:clickable="true"
                     android:focusable="true"
                     android:onClick="@{() -> listener.onClick(video)}"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                    android:text="@string/video_list_button_title"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
             </LinearLayout>
 
