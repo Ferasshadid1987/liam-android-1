@@ -23,17 +23,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="130dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_vertical"
                 android:gravity="center"
-                android:text="@string/title_login"
                 android:textAllCaps="true"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
                 android:textColor="@android:color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:srcCompat="@drawable/liam_logo" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -58,6 +58,7 @@
             android:hint="@string/email_field_hint"
             android:paddingTop="@dimen/margin_vertical_half"
             android:paddingBottom="@dimen/margin_vertical_half"
+            app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/login_hero">
@@ -81,6 +82,7 @@
             android:hint="@string/password_field_hint"
             android:paddingTop="@dimen/margin_vertical_half"
             android:paddingBottom="@dimen/margin_vertical_half"
+            app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/login_email_field">
@@ -112,9 +114,9 @@
                 android:layout_marginEnd="@dimen/margin_horizontal_double"
                 android:clickable="true"
                 android:focusable="true"
+                android:onClick="@{() -> viewModel.onLoginClick()}"
                 android:text="@string/login_button_text"
                 android:textAllCaps="true"
-                android:onClick="@{() -> viewModel.onLoginClick()}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
             <TextView

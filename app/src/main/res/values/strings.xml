@@ -19,4 +19,8 @@
     <string name="bottom_nav_title_store">Marketplace</string>
     <string name="bottom_nav_title_videos">Courses</string>
     <string name="video_list_button_title">Course Details</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_likes_title">Likes</string>
+    <string name="dashboard_downloads_title">Downloads</string>
 </resources>

@@ -24,7 +24,6 @@
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.ahmedtikiwa.liam.ui.dashboard.DashboardFragment"
-        android:label="DashboardFragment"
         tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_dashboardFragment_to_videoListFragment"

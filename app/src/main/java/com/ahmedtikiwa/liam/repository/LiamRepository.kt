@@ -3,6 +3,7 @@ package com.ahmedtikiwa.liam.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.ahmedtikiwa.liam.domain.StoreItem
+import com.ahmedtikiwa.liam.domain.UserDetails
 import com.ahmedtikiwa.liam.domain.VideoItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -19,6 +20,28 @@ class LiamRepository {
 
     val videoList: LiveData<List<VideoItem>>
         get() = _videosList
+
+    private val _userDetails = MutableLiveData<UserDetails>()
+
+    val userDetails: LiveData<UserDetails>
+        get() = _userDetails
+
+    suspend fun getMockUserDetails() {
+        withContext(Dispatchers.IO) {
+            try {
+                val userDetails = UserDetails(
+                    id = "Ahmed",
+                    profileImageUrl = "https://images.unsplash.com/photo-1558981420-87aa9dad1c89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+                    totalDownloads = "1000",
+                    totalLiams = "L5000",
+                    totalLikes = "1500"
+                )
+                _userDetails.postValue(userDetails)
+            } catch (e: Exception) {
+                Timber.e(e)
+            }
+        }
+    }
 
     suspend fun getMockVideoList() {
         withContext(Dispatchers.IO) {
