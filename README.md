@@ -19,3 +19,10 @@ The directory structure of the app is as follows
 - network - This is the network layer and all network classes will reside here
 - repository - this is where all the data for the app will originate from. The respective viewModel will make a request and the repository will either query the network or query the database. For the purpose of the Liam app, the data is purely mocked by the repository layer
 - ui - all the fragments and viewModels for the different screens reside here
+
+### Screenshots
+![device promo](https://github.com/The-Development-Hub/liam-android/blob/master/screenshots/device-2020-03-29-190745.png "Liam: Covid Breaker")
+![device promo](https://github.com/The-Development-Hub/liam-android/blob/master/screenshots/device-2020-03-29-191842.png "Liam: Covid Breaker")
+![device promo](https://github.com/The-Development-Hub/liam-android/blob/master/screenshots/device-2020-03-29-192014.png "Liam: Covid Breaker")
+![device promo](https://github.com/The-Development-Hub/liam-android/blob/master/screenshots/device-2020-03-29-192049.png "Liam: Covid Breaker")
+![device promo](https://github.com/The-Development-Hub/liam-android/blob/master/screenshots/device-2020-03-29-192154.png "Liam: Covid Breaker")
