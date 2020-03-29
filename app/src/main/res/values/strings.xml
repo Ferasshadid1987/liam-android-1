@@ -23,4 +23,6 @@
     <!-- Dashboard -->
     <string name="dashboard_likes_title">Likes</string>
     <string name="dashboard_downloads_title">Downloads</string>
+    <string name="store_item_download_notification_text">Your download will begin shortly</string>
+    <string name="store_item_favorite_notification_text">You have liked this item</string>
 </resources>

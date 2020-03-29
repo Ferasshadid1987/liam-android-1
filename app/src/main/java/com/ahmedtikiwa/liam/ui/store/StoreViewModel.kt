@@ -18,8 +18,18 @@ class StoreViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _navigateToSelectedStoreItem = MutableLiveData<StoreItem>()
 
+    private val _downloadItem = MutableLiveData<StoreItem>()
+
+    private val _favoriteItem = MutableLiveData<StoreItem>()
+
+    val downloadItem: LiveData<StoreItem>
+        get() = _downloadItem
+
     val navigateToSelectedShow: LiveData<StoreItem>
         get() = _navigateToSelectedStoreItem
+
+    val favoriteItem: LiveData<StoreItem>
+        get() = _favoriteItem
 
     init {
         viewModelScope.launch {
@@ -35,6 +45,30 @@ class StoreViewModel(application: Application) : AndroidViewModel(application) {
 
     fun displayStoreItemDetailComplete() {
         _navigateToSelectedStoreItem.value = null
+    }
+
+    fun onDownloadClick(storeItem: StoreItem) {
+        downloadItem(storeItem)
+    }
+
+    fun onFavoriteClick(storeItem: StoreItem) {
+        favoriteItem(storeItem)
+    }
+
+    fun downloadItem(storeItem: StoreItem) {
+        _downloadItem.value = storeItem
+    }
+
+    fun downloadItemComplete() {
+        _downloadItem.value = null
+    }
+
+    fun favoriteItem(storeItem: StoreItem) {
+        _favoriteItem.value = storeItem
+    }
+
+    fun favoriteItemComplete() {
+        _favoriteItem.value = null
     }
 
     override fun onCleared() {

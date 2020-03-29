@@ -9,7 +9,10 @@ import com.ahmedtikiwa.liam.R
 import com.ahmedtikiwa.liam.databinding.StoreListItemBinding
 import com.ahmedtikiwa.liam.domain.StoreItem
 
-class StoreListAdapter(val listener: StoreListItemAdapterListener) :
+class StoreListAdapter(
+    val downloadListener: StoreListItemAdapterDownloadListener,
+    val favoriteListener: StoreListItemAdapterFavoriteListener
+) :
     RecyclerView.Adapter<StoreListAdapter.ViewHolder>() {
 
     var storeItems: List<StoreItem> = emptyList()
@@ -19,7 +22,7 @@ class StoreListAdapter(val listener: StoreListItemAdapterListener) :
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val withDataBinding : StoreListItemBinding = DataBindingUtil.inflate(
+        val withDataBinding: StoreListItemBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
             ViewHolder.LAYOUT,
             parent,
@@ -28,17 +31,22 @@ class StoreListAdapter(val listener: StoreListItemAdapterListener) :
         return ViewHolder(withDataBinding)
     }
 
-    override fun getItemCount(): Int  = storeItems.size
+    override fun getItemCount(): Int = storeItems.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.viewDataBinding.also {
             it.storeIem = storeItems[position]
-            it.listener = listener
+            it.downloadListener = downloadListener
+            it.favoriteListener = favoriteListener
         }
     }
 
-    class StoreListItemAdapterListener(val block: (StoreItem) -> Unit) {
-        fun onClick(storeItem: StoreItem) = block(storeItem)
+    class StoreListItemAdapterDownloadListener(val block: (StoreItem) -> Unit) {
+        fun onDownloadClick(storeItem: StoreItem) = block(storeItem)
+    }
+
+    class StoreListItemAdapterFavoriteListener(val block: (StoreItem) -> Unit) {
+        fun onFavoriteClick(storeItem: StoreItem) = block(storeItem)
     }
 
     class ViewHolder(val viewDataBinding: StoreListItemBinding) :

@@ -10,8 +10,12 @@
             type="com.ahmedtikiwa.liam.domain.StoreItem" />
 
         <variable
-            name="listener"
-            type="com.ahmedtikiwa.liam.ui.store.StoreListAdapter.StoreListItemAdapterListener" />
+            name="downloadListener"
+            type="com.ahmedtikiwa.liam.ui.store.StoreListAdapter.StoreListItemAdapterDownloadListener" />
+
+        <variable
+            name="favoriteListener"
+            type="com.ahmedtikiwa.liam.ui.store.StoreListAdapter.StoreListItemAdapterFavoriteListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -76,6 +80,9 @@
                 android:id="@+id/store_list_item_bid_up"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{() -> downloadListener.onDownloadClick(storeIem)}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/store_list_item_price"
                 app:srcCompat="@drawable/ic_file_download_black_24dp" />
@@ -83,6 +90,9 @@
             <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{() -> favoriteListener.onFavoriteClick(storeIem)}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/store_list_item_price"
                 app:srcCompat="@drawable/ic_favorite_border_black_24dp" />

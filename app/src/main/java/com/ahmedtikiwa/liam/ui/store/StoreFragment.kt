@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ahmedtikiwa.liam.R
 import com.ahmedtikiwa.liam.databinding.FragmentStoreBinding
 import com.ahmedtikiwa.liam.domain.StoreItem
+import com.google.android.material.snackbar.Snackbar
 
 class StoreFragment : Fragment() {
 
@@ -34,9 +35,14 @@ class StoreFragment : Fragment() {
 
         binding.viewModel = viewModel
 
-        storeListAdapter = StoreListAdapter(StoreListAdapter.StoreListItemAdapterListener {
-            viewModel.displayStoreItemDetail(it)
-        })
+        storeListAdapter = StoreListAdapter(
+            StoreListAdapter.StoreListItemAdapterDownloadListener {
+                viewModel.onDownloadClick(it)
+            },
+            StoreListAdapter.StoreListItemAdapterFavoriteListener {
+                viewModel.onFavoriteClick(it)
+            }
+        )
 
         binding.root.findViewById<RecyclerView>(R.id.recyclerview_store_list).apply {
             layoutManager = GridLayoutManager(context, 2)
@@ -50,6 +56,28 @@ class StoreFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel.storeList.observe(viewLifecycleOwner, Observer<List<StoreItem>> {
             storeListAdapter?.storeItems = it
+        })
+
+        viewModel.downloadItem.observe(viewLifecycleOwner, Observer {
+            if (it != null) {
+                Snackbar.make(
+                    binding.root,
+                    getString(R.string.store_item_download_notification_text),
+                    Snackbar.LENGTH_LONG
+                ).show()
+                viewModel.downloadItemComplete()
+            }
+        })
+
+        viewModel.favoriteItem.observe(viewLifecycleOwner, Observer {
+            if (it != null) {
+                Snackbar.make(
+                    binding.root,
+                    getString(R.string.store_item_favorite_notification_text),
+                    Snackbar.LENGTH_LONG
+                ).show()
+                viewModel.favoriteItemComplete()
+            }
         })
     }
 
