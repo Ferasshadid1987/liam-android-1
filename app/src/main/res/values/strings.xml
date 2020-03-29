@@ -29,4 +29,5 @@
     <string name="username_field_hint">Username</string>
     <string name="signup_have_an_account_hint">Already have an account? Sign in</string>
     <string name="signup_button_text">Create Account</string>
+    <string name="store_list_download_button_description">store_list_download_button</string>
 </resources>

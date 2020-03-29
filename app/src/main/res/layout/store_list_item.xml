@@ -77,22 +77,26 @@
                 tools:text="Video Name" />
 
             <ImageButton
-                android:id="@+id/store_list_item_bid_up"
+                android:id="@+id/download_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="@{() -> downloadListener.onDownloadClick(storeIem)}"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/store_list_item_price"
                 app:srcCompat="@drawable/ic_file_download_black_24dp" />
 
             <ImageButton
+                android:id="@+id/store_list_like_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
+                android:contentDescription="@string/store_list_download_button_description"
                 android:focusable="true"
                 android:onClick="@{() -> favoriteListener.onFavoriteClick(storeIem)}"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/store_list_item_price"
                 app:srcCompat="@drawable/ic_favorite_border_black_24dp" />

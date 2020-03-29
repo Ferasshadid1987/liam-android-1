@@ -8,7 +8,6 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.ahmedtikiwa.liam.ui.login.LoginFragment"
-        android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
@@ -60,7 +59,6 @@
     <fragment
         android:id="@+id/videoDetailFragment"
         android:name="com.ahmedtikiwa.liam.ui.videodetail.VideoDetailFragment"
-        android:label="VideoDetailFragment"
         tools:layout="@layout/fragment_video_detail">
         <argument
             android:name="videoItem"
@@ -70,6 +68,5 @@
     <fragment
         android:id="@+id/storeFragment"
         android:name="com.ahmedtikiwa.liam.ui.store.StoreFragment"
-        android:label="StoreFragment"
         tools:layout="@layout/fragment_store" />
 </navigation>

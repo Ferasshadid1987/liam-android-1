@@ -16,7 +16,7 @@
             android:id="@+id/login_hero"
             android:layout_width="0dp"
             android:layout_height="@dimen/login_hero_height"
-            android:background="@drawable/ic_flat_mountains"
+            android:background="@drawable/child_lockdown"
             android:gravity="center_vertical"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
