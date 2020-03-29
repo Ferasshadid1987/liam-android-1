@@ -5,4 +5,5 @@
     <color name="colorAccent">#428e92</color>
 
     <color name="listBackgroundColor">#eceff1</color>
+    <color name="dashboardProfileImageBackground">#424242</color>
 </resources>

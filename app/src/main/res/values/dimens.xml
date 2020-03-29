@@ -17,5 +17,6 @@
     <dimen name="dashboard_profile_image_border_width">4dp</dimen>
     <dimen name="dashboard_profile_image_width">200dp</dimen>
     <dimen name="dashboard_profile_image_height">200dp</dimen>
+    <dimen name="dashboard_profile_image_frame_padding">30dp</dimen>
 
 </resources>

@@ -18,24 +18,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <LinearLayout
                 android:id="@+id/profile_image"
-                android:layout_width="@dimen/dashboard_profile_image_width"
-                android:layout_height="@dimen/dashboard_profile_image_height"
-                android:layout_marginTop="@dimen/margin_vertical"
-                app:civ_border_color="#000000"
-                app:civ_border_width="@dimen/dashboard_profile_image_border_width"
-                app:imageUrl="@{viewModel.userDetails.profileImageUrl}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/dashboardProfileImageBackground"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="@dimen/dashboard_profile_image_frame_padding"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@drawable/ic_flat_mountains" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/dashboard_profile_image_width"
+                    android:layout_height="@dimen/dashboard_profile_image_height"
+                    app:civ_border_color="#ffffff"
+                    app:civ_border_width="@dimen/dashboard_profile_image_border_width"
+                    app:imageUrl="@{viewModel.userDetails.profileImageUrl}"
+                    tools:src="@drawable/ic_flat_mountains" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/dashboard_total_liams"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="38dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center_horizontal"
                 android:text="@{viewModel.userDetails.totalLiams}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
